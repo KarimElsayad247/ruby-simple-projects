@@ -1,5 +1,3 @@
-require 'pry-byebug'
-
 # A dynamic programming approach is suitable.
 # Define a 2d array where each row represents the day of buying the stock
 # and each column is the day of selling, where you can't sell before buying.
@@ -9,7 +7,6 @@ def stock_picker(prices)
     # afformentioned 2d array
     arr = []
     num_days = prices.length
-    # binding.pry
     prices.each_with_index do |price, i|
         arr.push([0] * num_days)
         for j in (i...num_days)
